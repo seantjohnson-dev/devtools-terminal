@@ -78,7 +78,7 @@
    * http://stackoverflow.com/questions/879152/how-do-i-make-javascript-beep
    */
   var beep = (function () {
-    var ctx = new(window.audioContext || window.webkitAudioContext);
+    var ctx = new(window.AudioContext || window.webkitAudioContext);
     var playing = false;
     return function (duration, type, frequency, finishedCallback) {
       if(playing) return;
